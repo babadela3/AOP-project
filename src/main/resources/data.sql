@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS result;
+
+CREATE TABLE result (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  class_name VARCHAR(250) NOT NULL,
+  method_name VARCHAR(250) NOT NULL,
+  result VARCHAR(250) NOT NULL,
+  create_date DATETIME DEFAULT NULL
+);

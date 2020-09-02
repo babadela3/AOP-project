@@ -31,7 +31,7 @@ public class NumberUtilsServiceTest {
     }
 
     @Test
-    public void testSunMethod() {
+    public void testSumMethod() {
         // Basic positive tests and check the result value for sum method
         int sum1 = numberUtilsService.sum(10);
         assertEquals(55, sum1);
@@ -55,5 +55,4 @@ public class NumberUtilsServiceTest {
         exceptionRule.expectMessage("The number of recursive calls is too big");
         numberUtilsService.factorial(9);
     }
-
 }

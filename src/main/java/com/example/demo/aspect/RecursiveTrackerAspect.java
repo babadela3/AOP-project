@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @Slf4j
 @Aspect
@@ -33,7 +34,7 @@ public class RecursiveTrackerAspect {
         // Get the hashmap to check if number of calls exceeds the limit from MaxDepth
         if (trackingMethods.containsKey(pjp.getSignature().toString())) {
             int value = trackingMethods.get(pjp.getSignature().toString());
-            // Throw RunTimeException if number of calls exceeds the limit
+            // Throw RunTimeException if number of calls exceeds the limita
             if (value > maxDepth.times()) {
                 throw new RuntimeException("The number of recursive calls is too big");
             }
